@@ -221,6 +221,14 @@ html:not(.page-trans-loaded) {
   color: #ECDA39;
 }
 
+.ag-review-social_btn:hover .fa-instagram:before,
+.ag-review-social_btn:hover .ag-review-social_link {
+  color: #ECDA39;
+}
+.ag-review-social_btn .ag-review-social_link {
+  font-size: 20px;
+}
+
 #ag-influence .ag-footer_text {
   font-size: 16px;
   color: #ECDA39;
