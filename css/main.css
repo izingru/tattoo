@@ -534,132 +534,88 @@ html:not(.page-trans-loaded) {
   }
 }
 
-
-
-.cd-image-container {
-  position: relative;
-  width: 90%;
-  max-width: 400px;
-  margin: 0 auto;
-}
-#ag-influence .cd-image-container img {
-  display: block;
-  border-radius: 5px;
-}
-.cd-image-label {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  color: #ffffff;
-  padding: 1em;
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  opacity: 0;
-
-  -webkit-transform: translateY(20px);
-  -moz-transform: translateY(20px);
-  -ms-transform: translateY(20px);
-  -o-transform: translateY(20px);
-  transform: translateY(20px);
-
-  -webkit-transition: -webkit-transform 0.3s 0.7s, opacity 0.3s 0.7s;
-  -moz-transition: -moz-transform 0.3s 0.7s, opacity 0.3s 0.7s;
-  transition: transform 0.3s 0.7s, opacity 0.3s 0.7s;
-}
-.cd-image-label.is-hidden {
-  visibility: hidden;
-}
-.is-visible .cd-image-label {
-  opacity: 1;
-
-  -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  -o-transform: translateY(0);
-  transform: translateY(0);
-}
-.cd-resize-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
+/* before-after */
+.sl-container {
+  height: 535px;
+  width: 400px;
+  border: 3px solid #000;
+  margin: 20px auto;
 
   overflow: hidden;
 
-  -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  transform: translateZ(0);
+  position: relative;
 
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
 }
-#ag-influence .cd-resize-img img {
+.sl-container .view {
+  overflow: hidden;
+
   position: absolute;
-  left: 0;
   top: 0;
-  display: block;
-  height: 100%;
-  width: auto;
-  max-width: none;
-}
-.cd-resize-img .cd-image-label {
-  right: auto;
   left: 0;
 }
-.is-visible .cd-resize-img {
-  width: 50%;
-  border-right: 4px solid #fff;
+.sl-container .view img {
+  width: 400px;
+  max-width: 400px;
+}
+.sl-container .view-before {
+  z-index: 100;
+}
+.sl-container .view-after {
+  width: 100px;
 
-  -webkit-animation: cd-bounce-in 0.7s;
-  -moz-animation: cd-bounce-in 0.7s;
-  animation: cd-bounce-in 0.7s;
+  z-index: 200;
 }
+.sl-container .dragme {
+  height: 100%;
+  width: 5px;
+  background-color: #000;
 
-@-webkit-keyframes cd-bounce-in{0%{width:0;}
-  60%{width:55%;}
-  100%{width:50%;}
-}
-@-moz-keyframes cd-bounce-in{0%{width:0;}
-  60%{width:55%;}
-  100%{width:50%;}
-}
-@keyframes cd-bounce-in{0%{width:0;}
-  60%{width:55%;}
-  100%{width:50%;}
-}
-.cd-handle {
+  cursor: pointer;
+
+  z-index: 300;
   position: absolute;
-  height: 44px;
-  width: 44px;
-  left: 50%;
-  top: 50%;
-  margin-left: -24px;
-  margin-top: -22px;
-  border-radius: 50%;
-  background: url(../images/cover-up/scroll.png) no-repeat 50% 50% #6EB53B;
-  cursor: move;
-  opacity: 0;
-  -webkit-transform: translate3d(0, 0, 0) scale(0);
-  -moz-transform: translate3d(0, 0, 0) scale(0);
-  -ms-transform: translate3d(0, 0, 0) scale(0);
-  -o-transform: translate3d(0, 0, 0) scale(0);
-  transform: translate3d(0, 0, 0) scale(0);
+  top: 0;
+  left: 100px;
 }
-.cd-handle.draggable2 {
-  background-color: #445b7c;
+.sl-container .dr-circle {
+  height: 40px;
+  width: 40px;
+  background-color: #000;
+
+  cursor: pointer;
+
+  text-align: center;
+
+  z-index: 300;
+  position: absolute;
+  top: calc(50% - 20px);
+  left: -18px;
+
+  border-radius: 100%;
 }
-.is-visible .cd-handle {
-  opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0) scale(1);
-  -moz-transform: translate3d(0, 0, 0) scale(1);
-  -ms-transform: translate3d(0, 0, 0) scale(1);
-  -o-transform: translate3d(0, 0, 0) scale(1);
-  transform: translate3d(0, 0, 0) scale(1);
-  -webkit-transition: -webkit-transform 0.3s 0.7s, opacity 0s 0.7s;
-  -moz-transition: -moz-transform 0.3s 0.7s, opacity 0s 0.7s;
-  transition: transform 0.3s 0.7s, opacity 0s 0.7s;
+.sl-container .dr-circle i {
+  line-height: 47px;
+
+  font-weight: bold;
+  font-size: 20px;
+  color: #ECDA39;
 }
+
+@media only screen and (max-width: 700px) {
+  .sl-container {
+    height: 400px;
+    width: 320px;
+  }
+  .sl-container .view img {
+    width: 320px;
+    max-width: 320px;
+  }
+}
+/* /before-after */
