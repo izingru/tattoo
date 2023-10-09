@@ -1,3 +1,9 @@
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
 /* head 1 */
 .sharing-default-minimal .nectar-love.loved,
 body .nectar-social[data-color-override="override"].fixed > a:before,
@@ -285,6 +291,9 @@ html:not(.page-trans-loaded) {
 .ag-review-social_btn .ag-review-social_link {
   font-size: 20px;
 }
+#ag-influence .testimonial_slider blockquote p {
+  color: #FFF;
+}
 
 #ag-map .arrow::before {
   margin-top: -20px;
@@ -512,6 +521,16 @@ html:not(.page-trans-loaded) {
   }
 }
 
+@media only screen and (max-width: 639px) {
+  #ag-influence .ag-slogan_text {
+    font-size: 17px;
+  }
+
+  #ag-influence .testimonial_slider blockquote p {
+    font-size: 17px;
+  }
+}
+
 @media only screen and (max-width: 479px) {
   #ag-influence .ag-gallery-tab_item {
     margin: 0 10px;
@@ -619,7 +638,7 @@ html:not(.page-trans-loaded) {
   }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 479px) {
   .sl-container {
     height: 295px;
     width: 220px;
