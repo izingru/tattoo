@@ -528,6 +528,11 @@ html:not(.page-trans-loaded) {
   #ag-influence .ag-slogan {
     padding: 20px 15px;
   }
+
+  body #top #logo img,
+  #header-outer[data-permanent-transparent="false"] #logo .dark-version {
+    height: 40px !important;
+  }
 }
 
 @media only screen and (max-width: 639px) {
