@@ -510,6 +510,10 @@ html:not(.page-trans-loaded) {
   #ag-influence .ag-gallery-tab_item {
     margin: 0 30px;
   }
+
+  #ag-influence .ag-descr_box {
+    padding: 30px 0;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -518,6 +522,11 @@ html:not(.page-trans-loaded) {
   }
   #ag-influence .ag-gallery-tab_link {
     min-width: 150px;
+  }
+
+  #ag-influence .ag-slogan_box,
+  #ag-influence .ag-slogan {
+    padding: 20px 15px;
   }
 }
 
