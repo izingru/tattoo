@@ -42,7 +42,7 @@ body[data-header-format="left-header"][data-header-resize="0"] .container-wrap {
   padding-top: 0;
 }
 html:not(.page-trans-loaded) {
-  background-color: #ffffff;
+  background-color: #000;
 }
 /* head 2 */
 .no-rgba #header-space {
