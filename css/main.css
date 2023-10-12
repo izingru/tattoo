@@ -194,7 +194,7 @@ html:not(.page-trans-loaded) {
 
 @supports (((-webkit-background-clip:text) or (background-clip:text)) or (-webkit-background-clip:text)) and ((text-fill-color:transparent) or (-webkit-text-fill-color:transparent)) {
   #ag-influence .ag-header_title {
-    width: 250px;
+    width: 300px;
     margin: 0 auto 30px;
 
 
